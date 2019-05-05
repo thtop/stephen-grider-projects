@@ -9,3 +9,8 @@
     width: 250px;
     grid-row-end: span 2;
 }
+
+.image-list img:hover {
+    transform: scale(1.2);
+    border: 1px solid #000;
+}
