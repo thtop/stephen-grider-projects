@@ -4,10 +4,10 @@ import ApprovalCard from './ApprovalCard'
 import CommentDetail from './CommentDetail'
 import faker from 'faker'
 
-const moment = require('moment');
-
-
 const App = () => {
+
+    const moment = require('moment');
+
     return (
         <div className="ui container comments">
             <ApprovalCard>
@@ -22,7 +22,7 @@ const App = () => {
                 <CommentDetail 
                     avatar={faker.image.avatar()}
                     author={faker.name.firstName()}
-                    timeAgo={moment().calendar()}
+                    timeAgo={moment(new Date(), 'YYYYMMDD').fromNow()}
                     comment={faker.lorem.words()}
                 />
             </ApprovalCard>
